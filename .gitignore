@@ -1,0 +1,9 @@
+.git/
+.DS_Store
+views/.DS_Store
+ausa-estado/.DS_Store
+public/.DS_Store
+public/css/.DS_Store
+public/js/.DS_Store
+public/lib/.DS_Store
+node_modules/
