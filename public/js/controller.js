@@ -8,19 +8,22 @@ app.controller('infoCtrl', function($scope, socket, $interval) {
 	});
 
 	var value = 1;
-	
+
 	$scope.isCollapsedTwo = true
-	$scope.max = 100;
+	$scope.max = 200;
 	$scope.dynamic = value;
 
 	var interval = $interval(function(){
+		
 		$scope.dynamic = value;
 		value++
+		
 		if ($scope.stop >= 1){
 			$scope.isCollapsed = true;
 			$scope.isCollapsedTwo = false;
 			$interval.cancel(interval);
 		}
+
 	}, 180)
 
 	$scope.run = function(){
