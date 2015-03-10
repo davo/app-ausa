@@ -21,6 +21,12 @@
   <div>
     <input placeholder="  Filtrar " ng-model="searchText">
     <hr>
+    <div collapse="isCollapsed">
+        <div class="col-sm-12">
+            <progressbar max="max" value="dynamic"></progressbar>
+        </div>
+    </div>
+    <div collapse="isCollapsedTwo">
     <table id="searchTextResults" class="table table-striped">
       <thead>
         <tr >
@@ -35,6 +41,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </body>
 </html>

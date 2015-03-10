@@ -30,7 +30,7 @@ if ('development' == app.get('env')) {
 }
 app.get('/', routes.index);
 
-var msgWrite = '';
+var msgWrite = true;
 io.set('log level', 0);
 
 server.listen(app.get('port'), function(){
@@ -95,10 +95,10 @@ setInterval(function(){
 					"estado" : dictionary[key].replace(/_/g, " ").toUpperCase(),
 					"alert" : alerts[dictionary[key]]
 				})
-				TestSave = new db({
-					"ubicacion":  vpm[r].ubicacion,
-					"estado": dictionary[key],
-				}).save()
+				// TestSave = new db({
+				// 	"ubicacion":  vpm[r].ubicacion,
+				// 	"estado": dictionary[key],
+				// }).save()
 			}
 		}
 	}
