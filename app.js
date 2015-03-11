@@ -4,7 +4,7 @@ var http = require('http');
 var path = require('path');
 var routes = require('./routes');
 var db = require('./model/db');
-var log = require('./config/logAusa');
+//var log = require('./config/logAusa');
 var app = express();
 var request = require('request');
 var _ = require('underscore');
@@ -95,16 +95,15 @@ setInterval(function(){
 					"estado" : dictionary[key].replace(/_/g, " ").toUpperCase(),
 					"alert" : alerts[dictionary[key]]
 				})
-				// TestSave = new db({
-				// 	"ubicacion":  vpm[r].ubicacion,
-				// 	"estado": dictionary[key],
-				// }).save()
+				TestSave = new db({
+					"ubicacion":  vpm[r].ubicacion,
+					"estado": dictionary[key],
+				}).save()
 			}
 		}
 	}
 
 	socket.emit('msg', {'msg': test});
-	socket.emit('msgWrite', msgWrite);
 
 	})
 

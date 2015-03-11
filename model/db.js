@@ -1,4 +1,4 @@
-var mongoose = require('mongoose').connect('mongodb://lmokto:hacura@localhost/trafico');
+var mongoose = require('mongoose').connect('mongodb://localhost/trafico');
 
 var estadotrafico =  new mongoose.Schema({
 	date: { type: Date, default: Date.now},
