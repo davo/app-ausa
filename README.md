@@ -6,6 +6,10 @@ demo app-ausa
 
 Muestra en tiempo real el estado del flujo trafico de lo sensores de AUSA.
 
+Arquitectura, seguimos la logica de la siguiente imagen.
+
+![alt tag](http://cdn.venublog.com/wp-content/uploads/2013/06/realtime.png)
+
 ### Instalacion
 
 ```
