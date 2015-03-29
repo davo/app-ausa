@@ -18,7 +18,7 @@ Configurar variable config en el archivo model/db.js con datos de MongoDB.
 tener instalado y ejecutando, Redis y MongoDB.
 ```
 
-### Modo de visualización.
+### Modo de ejecucion.
 
 Browser, single page, carpeta client.
 Archivo app.js levanta web-app que visualiza en single page, los diferentes estados.
