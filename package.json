@@ -15,6 +15,7 @@
     "socket.io": "*",
     "winston": "*",
     "twit": "^1.1.15",
-    "foreman": "^0.3.0"
+    "foreman": "^0.3.0",
+    "redis": "^0.12.1"
   }
 }
