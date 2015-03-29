@@ -1,6 +1,6 @@
 {
   "name": "application-name",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -15,7 +15,6 @@
     "socket.io": "*",
     "winston": "*",
     "twit": "^1.1.15",
-    "foreman": "^0.3.0",
     "redis": "^0.12.1"
   }
 }

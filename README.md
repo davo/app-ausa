@@ -18,13 +18,13 @@ configurar variable config en model/db.js con datos de mongodb
 Browser, single page.
 
 ```
-foreman start
-localhost:5000
+forever start app.js
+http://localhost:8080
 ```
 
-Consola, con opcion de twitteo cuando sucede un evento, (trafico demorado, congestionado, etc), intervalo de 50segundos.
+Consola, con opcion de twitteo, dump-db, cuando sucede un evento, (trafico demorado, congestionado, etc), intervalo de 50segundos.
 
 ```
 cd ausa-estado
-node info-directa.js
+forever start trafictime.js
 ```
