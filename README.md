@@ -1,5 +1,5 @@
 
-demo app-ausa
+App realtime.
 ==================
 
 ## Descripcion
@@ -21,14 +21,12 @@ configurar variable config en model/db.js con datos de mongodb
 
 Browser, single page.
 
-```
-forever start app.js
-http://localhost:8080
-```
-
 Consola, con opcion de twitteo, dump-db, cuando sucede un evento, (trafico demorado, congestionado, etc), intervalo de 50segundos.
 
 ```
+forever start app.js
+http://localhost:8080
+
 cd ausa-estado
 forever start trafictime.js
 ```
