@@ -7,8 +7,8 @@ app.controller('infoCtrl', function($scope, socket, $interval) {
 	});
 
 	socket.on('msg', function(data) {
-		console.log(data)
-		$scope.informacion = data.msg;
+		console.log(data.msg)
+		$scope.informacion = [data.msg];
 		$scope.stop = data.msg.length
 	});
 

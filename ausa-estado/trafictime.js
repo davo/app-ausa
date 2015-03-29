@@ -57,7 +57,7 @@ setInterval(function(){
         }
         
         console.log(test)
-        client.publish("realtime", JSON.strinfigy(test));
+        client.publish("realtime", test);
         console.log("=========================================")
 
     });

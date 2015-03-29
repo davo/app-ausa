@@ -55,7 +55,7 @@ io.sockets.on('connection', function(socket){
 	});
 
 	client.on('message', function(msg) {
-		//socket.emit('msg', {'msg': msg});
+
 		console.log('debug', msg);
 	});
 
