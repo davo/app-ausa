@@ -19,9 +19,11 @@ configurar variable config en model/db.js con datos de mongodb
 
 ### Modo de visualización.
 
+archivo app.js levanta web-app
 Browser, single page.
 
-Consola, con opcion de twitteo, dump-db, cuando sucede un evento, (trafico demorado, congestionado, etc), intervalo de 50segundos.
+archivo trafictime.js levanta daemon, 
+con opcion de twitteo, dump-db, cuando sucede un evento, (trafico demorado, congestionado, etc), intervalo de 50segundos.
 
 ```
 forever start app.js
