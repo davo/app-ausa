@@ -2,9 +2,18 @@ app.controller('infoCtrl', function($scope, socket, $interval) {
 
 	$scope.informacion = [];
 
+	socket.on('connect', function(data){
+        console.log('connect');
+	});
+
 	socket.on('msg', function(data) {
-		$scope.informacion = data.msg;
+		console.log(data.msg)
+		$scope.informacion = [data.msg];
 		$scope.stop = data.msg.length
+	});
+
+	socket.on('reconnecting', function(data){
+		console.log('reconnecting');
 	});
 
 	var value = 1;
