@@ -56,8 +56,8 @@ setInterval(function(){
             }
         }
         
-        console.log(test)
-        client.publish("realtime", test);
+        //console.log(typeof test)
+        client.publish("realtime", JSON.stringify(test));
         console.log("=========================================")
 
     });

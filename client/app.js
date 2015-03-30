@@ -50,7 +50,9 @@ io.sockets.on('connection', function(socket){
 	subscribe.subscribe('realtime');
 
 	subscribe.on("message", function(channel, message) {
-		socket.emit('msg', {'msg': message});
+		//console.log(typeof message)
+		obj = JSON.parse(message);
+		socket.emit('msg', {'msg': obj});
 		console.log('msg', "received from channel #" + channel + " : " + message);
 	});
 
