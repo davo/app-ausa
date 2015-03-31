@@ -1,7 +1,7 @@
 var db = require('./db');
 
 var info = new db({
-    ubicacion: "ENLACE 25 MAYO",
+    ubicacion: "ENLACE AU 25 DE MAYO PEAJE",
     estado : "TRAFICO FLUIDO"
 });
 
