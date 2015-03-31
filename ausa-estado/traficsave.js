@@ -1,6 +1,8 @@
-var db = require('./model/db');
+var db = require('../client/model/db');
 
-TestSave = new db({
-	"ubicacion":  vpm[r].ubicacion,
-	"estado": dictionary[key],
-}).save()
+exports.save = function(ubicacion, estado, cb){
+	TestSave = new db({
+		"ubicacion":  ubicacion,
+		"estado": estado,
+	}).save(cb)
+}

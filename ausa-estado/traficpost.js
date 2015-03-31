@@ -7,15 +7,11 @@ var info = new tt({
   , access_token_secret: ''
 })
 
-var publishtwit = function(twit){
+module.post = function(twit, cb){
     info.post('statuses/update', { status: twit }, function(err, data, res) {
-        if (!err) {
-            console.log("twit" + data)
-            console.log(err)
-            //console.log(res)
-        } else {
-            console.log(err)
-            //console.log(res)
-        }
+        if (err)
+            cb(data)
+        //console.log("twit" + data)
+        cb(data)
     })
 }

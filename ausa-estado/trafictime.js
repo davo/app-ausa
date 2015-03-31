@@ -2,6 +2,7 @@ const request = require('request');
 const _ = require('underscore');
 const redis = require('redis');
 const client = redis.createClient();
+const traficdb = require('./traficsave.js')
 
 var arr = []
     , patron = /^VPM/
@@ -47,11 +48,17 @@ setInterval(function(){
         for (var key in dictionary){
             for (var r = 0; r<vpm.length;r++){
                 if (key.split("=")[0] == vpm[r].vpm){
+
+                    var ubicacion = vpm[r].ubicacion.replace(/[:_]/g, " ").toUpperCase();
+                    var estado = dictionary[key].replace(/_/g, " ").toUpperCase();
+                    traficdb.save(ubicacion, estado)
+                    
                     test.push({
-                        "ubicacion" : vpm[r].ubicacion.replace(/[:_]/g, " ").toUpperCase(),
-                        "estado" : dictionary[key].replace(/_/g, " ").toUpperCase(),
+                        "ubicacion" : ubicacion,
+                        "estado" : estado,
                         "alert" : alerts[dictionary[key]]
                     })
+
                 }
             }
         }

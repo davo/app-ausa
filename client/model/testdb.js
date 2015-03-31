@@ -1,8 +1,8 @@
 var db = require('./db');
 
 var info = new db({
-    ubicacion: "Pinamar",
-    estado : "trafico fluido"
+    ubicacion: "ENLACE 25 MAYO",
+    estado : "TRAFICO FLUIDO"
 });
 
 info.save();

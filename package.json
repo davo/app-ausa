@@ -13,8 +13,8 @@
     "cheerio": "*",
     "underscore": "*",
     "socket.io": "*",
-    "winston": "*",
     "twit": "^1.1.15",
-    "redis": "^0.12.1"
+    "redis": "^0.12.1",
+    "newrelic": "^1.18.0"
   }
 }
